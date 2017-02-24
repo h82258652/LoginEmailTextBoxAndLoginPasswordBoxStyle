@@ -14,7 +14,8 @@
         </ResourceDictionary>
     </Page.Resources>
     <Grid Background="LightBlue">
-        <StackPanel VerticalAlignment="Center"
+        <StackPanel HorizontalAlignment="Stretch"
+                    VerticalAlignment="Center"
                     Orientation="Vertical">
             <AutoSuggestBox Margin="20"
                             Style="{StaticResource LoginEmailTextBoxStyle}" />
