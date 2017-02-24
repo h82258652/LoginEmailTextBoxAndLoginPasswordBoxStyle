@@ -3,4 +3,7 @@
     <SolidColorBrush x:Key="U148AccentBrush"
                      Color="{ThemeResource U148AccentColor}" />
     <Color x:Key="U148AccentColor">#FF9900</Color>
+    <SolidColorBrush x:Key="U148HintTextBrush"
+                     Color="{ThemeResource U148HintTextColor}" />
+    <Color x:Key="U148HintTextColor">#61000000</Color>
 </ResourceDictionary>

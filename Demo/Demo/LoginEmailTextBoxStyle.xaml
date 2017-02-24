@@ -24,7 +24,7 @@
         <Setter Property="BorderThickness"
                 Value="0,0,0,1" />
         <Setter Property="FontFamily"
-                Value="{ThemeResource ContentControlThemeFontFamily}" />
+                Value="/Assets/Fonts/Roboto-Regular.ttf#Roboto,/Assets/Fonts/SourceHanSansSC-Normal.otf#Source Han Sans SC" />
         <Setter Property="FontSize"
                 Value="{ThemeResource ControlContentThemeFontSize}" />
         <Setter Property="ScrollViewer.HorizontalScrollMode"
@@ -352,12 +352,8 @@
                                                 <Storyboard>
                                                     <ObjectAnimationUsingKeyFrames Storyboard.TargetName="HintContentPresenter"
                                                                                    Storyboard.TargetProperty="Foreground">
-                                                        <DiscreteObjectKeyFrame KeyTime="0:0:0">
-                                                            <DiscreteObjectKeyFrame.Value>
-                                                                <!-- TODO -->
-                                                                <SolidColorBrush Color="#99000000" />
-                                                            </DiscreteObjectKeyFrame.Value>
-                                                        </DiscreteObjectKeyFrame>
+                                                        <DiscreteObjectKeyFrame KeyTime="0:0:0"
+                                                                                Value="{ThemeResource U148HintTextBrush}" />
                                                     </ObjectAnimationUsingKeyFrames>
                                                 </Storyboard>
                                             </VisualState>
@@ -455,10 +451,9 @@
                                                                 <SineEase EasingMode="EaseOut" />
                                                             </DoubleAnimation.EasingFunction>
                                                         </DoubleAnimation>
-                                                        <!--  TODO  -->
                                                         <ColorAnimation Storyboard.TargetName="HintContentPresenter"
                                                                         Storyboard.TargetProperty="(Control.Foreground).(SolidColorBrush.Color)"
-                                                                        To="#99000000"
+                                                                        To="{ThemeResource U148HintTextColor}"
                                                                         Duration="0:0:0.3" />
                                                     </Storyboard>
                                                 </VisualTransition>
@@ -531,7 +526,6 @@
                                                     IsHitTestVisible="False"
                                                     IsTabStop="False"
                                                     Padding="{TemplateBinding Padding}" />
-                                    <!--  TODO  -->
                                     <ContentControl x:Name="HintContentPresenter"
                                                     Grid.Row="1"
                                                     Grid.Column="0"
@@ -539,7 +533,7 @@
                                                     Margin="{TemplateBinding BorderThickness}"
                                                     animations:LayoutAnimation.Duration="0:0:0.3"
                                                     Content="{TemplateBinding helpers:TextBoxHelper.Hint}"
-                                                    Foreground="#99000000"
+                                                    Foreground="{ThemeResource U148HintTextBrush}"
                                                     IsHitTestVisible="False"
                                                     IsTabStop="False"
                                                     Padding="{TemplateBinding Padding}"
